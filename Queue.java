@@ -36,13 +36,18 @@ public class Queue{
   }
 
   public void display(){
-    Node current = stack1.top;
-    if(current!=null){
-      while(current!=null){
-        System.out.println(current.data+" ");
-        current = current.next;
-      }
+    if(stack2==null){
+      stack2 = new Stack();
     }
-    System.out.println("Empty Queue");
+    Node current = stack1.top;
+    while(current!=null){
+      stack2.push(stack1.pop());
+      current = current.next;
+    }
+    current = stack2.top;
+    while(current!=null){
+      System.out.print(current.data+" ");
+      current = current.next;
+    }
   }
 }
