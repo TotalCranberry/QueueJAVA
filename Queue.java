@@ -18,7 +18,7 @@ public class Queue{
     if(stack2==null){
       stack2 = new Stack();
     }
-    if(stack1.isEmpty){
+    if(stack1.isEmpty()){
       System.out.println("Queue is Empty");
     }
     Node current = stack1.top;
