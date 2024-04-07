@@ -1,7 +1,7 @@
 public class Stack{
   Node top;
 
-  public Stack(int data){
+  public Stack(){
     this.top = null;
   }
   
@@ -14,14 +14,14 @@ public class Stack{
 
   public void push(int data){
     Node newNode = new Node(data);
-    if(!isEmpty){
+    if(!isEmpty()){
       newNode.next = this.top; 
     }
     this.top = newNode;
   }
 
   public int pop(){
-    if(!isEmpty){
+    if(!isEmpty()){
       Node temp = this.top;
       this.top = this.top.next;
       int data = temp.data;
